@@ -75,11 +75,23 @@ namespace MoviesAPI.Controllers
    await context.SaveChangesAsync();
    return NoContent();
   }
-  [HttpDelete]
-  public async Task <ActionResult> Delete()
-  {
-   throw new NotImplementedException();
-  }
 
+  [HttpDelete("{id:int}")]
+  public async Task <ActionResult> Delete(int id)
+  {
+   //look if record exists
+   var exists = await context.Genres.AnyAsync(x => x.Id == id);
+   if(!exists)
+   {
+    return NotFound();
+   }
+   //creating instance of genre class 
+   //pass it to remove method of entity framework core
+   //pass record of id to be deleted
+   //save changes - save query you want to delete
+   context.Remove(new Genre(){Id = id});
+   await context.SaveChangesAsync();
+   return NoContent();
+  }
  }
 }

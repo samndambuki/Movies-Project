@@ -2163,11 +2163,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SUN\\source\\repos\\MoviesAPI\\MoviesAPI.csproj",
+      "projectUniqueName": "C:\\Users\\SUN\\source\\repos\\Movies Project\\Backend\\MoviesAPI\\MoviesAPI.csproj",
       "projectName": "MoviesAPI",
-      "projectPath": "C:\\Users\\SUN\\source\\repos\\MoviesAPI\\MoviesAPI.csproj",
+      "projectPath": "C:\\Users\\SUN\\source\\repos\\Movies Project\\Backend\\MoviesAPI\\MoviesAPI.csproj",
       "packagesPath": "C:\\Users\\SUN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SUN\\source\\repos\\MoviesAPI\\obj\\",
+      "outputPath": "C:\\Users\\SUN\\source\\repos\\Movies Project\\Backend\\MoviesAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -2250,7 +2250,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

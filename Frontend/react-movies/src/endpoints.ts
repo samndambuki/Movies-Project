@@ -3,3 +3,5 @@ export const GETGenres=`${baseURL}/genres/GetAllGenres`;
 export const GETGenresById=`${baseURL}/genres`;
 export const PUTGenres=`${baseURL}/genres`;
 export const POSTGenres=`${baseURL}/genres`;
+export const DELETEGenres = `${baseURL}/genres`;
+

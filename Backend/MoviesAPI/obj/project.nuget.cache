@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ki8C2LJN9+TACr3aEOKpSl49ll+AHWh6fwJ/sxsU5+fAZCu+TD8hAr56Vf66f4IQZnojy/iIjEomRSS6TQlIKA==",
+  "dgSpecHash": "8Z6AebKxxmlh3XFut5yC+ijWRm9JZhZrvlRX46HijL/u92nBxzZR+pubdKOAV4ByENgf/ldNlxboeyhb9su96Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SUN\\source\\repos\\MoviesAPI\\MoviesAPI.csproj",
+  "projectFilePath": "C:\\Users\\SUN\\source\\repos\\Movies Project\\Backend\\MoviesAPI\\MoviesAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SUN\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\SUN\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
