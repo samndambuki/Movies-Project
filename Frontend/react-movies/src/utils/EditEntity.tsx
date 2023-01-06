@@ -51,9 +51,9 @@ interface editEntityProps<TCreation,TRead>
     entityName: string;
     indexURL: string;
     transform(entity: TRead):TCreation;
-    //children(entity:TCreation, edit:(entity:TCreation) => void):ReactElement;
+    children(entity:TCreation, edit:(entity:TCreation) => void):ReactElement;
 }
 
-EditEntity.defautProps = {
+EditEntity.defaultProps = {
     transform:(entity:any) => entity
 }

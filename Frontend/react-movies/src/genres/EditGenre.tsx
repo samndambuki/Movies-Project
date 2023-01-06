@@ -15,7 +15,6 @@ export default function EditGenre() {
     <EditEntity<genreCreationDTO,genreDTO>
       url={PUTGenres} entityName="Genres"
       indexURL="/genres"
-      transform={}
       >
       {(entity,edit) => 
       <GenreForm model={entity}
