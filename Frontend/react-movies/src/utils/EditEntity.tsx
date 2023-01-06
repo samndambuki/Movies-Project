@@ -1,9 +1,7 @@
-import axios, {AxiosResponse} from "axios";
+import axios, { AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 import { ReactElement } from "react-markdown/lib/react-markdown";
 import { useHistory, useParams } from "react-router-dom";
-import { GETGenresById } from "../endpoints";
-import { movieTheaterCreationDTO } from "../movietheatres/movieTheater.model";
 import DisplayErrors from "./DisplayErrors";
 import Loading from "./Loading";
 

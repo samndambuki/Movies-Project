@@ -1,11 +1,6 @@
-import axios, { AxiosResponse } from "axios";
-import { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
-import { GETGenresById, PUTGenres } from "../endpoints";
-import DisplayErrors from "../utils/DisplayErrors";
+import { PUTGenres } from "../endpoints";
 import EditEntity from "../utils/EditEntity";
-import Loading from "../utils/Loading";
-import { genreCreationDTO,genreDTO } from "./genre.model";
+import { genreCreationDTO, genreDTO } from "./genre.model";
 import GenreForm from "./GenreForm";
 
 export default function EditGenre() {
