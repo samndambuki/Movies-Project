@@ -2,11 +2,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using MoviesAPI;
 using MoviesAPI.APIBehabior;
-//using MoviesAPI;
 using MoviesAPI.Filters;
-//using Microsoft.EntityFrameworkCore;
-
-
 
 namespace MoviessAPI;
 public class Startup
@@ -67,12 +63,11 @@ public class Startup
 
   app.UseHttpsRedirection();
   app.UseRouting();
-      app.UseCors(x=>x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()); 
+  app.UseCors(x=>x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().WithExposedHeaders("totalAmountOfRecords")); 
   app.UseAuthentication();
   app.UseAuthorization();
   app.UseEndpoints(endpoints =>{
    endpoints.MapControllers();
   });
-
  }
 }

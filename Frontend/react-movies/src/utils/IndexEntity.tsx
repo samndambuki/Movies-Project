@@ -2,6 +2,7 @@ import axios, { AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 import { ReactElement } from "react-markdown/lib/react-markdown";
 import { Link } from "react-router-dom";
+import { GETGenres } from "../endpoints";
 import Button from "./Button";
 import customConfirm from "./customConfirm";
 import GenericList from "./GenericList";
@@ -12,7 +13,7 @@ export default function IndexEntity<T>(props:indexEntityProps<T>)
 {
     const [entities, setEntities] = useState<T[]>();
     const [totalAmountOfPages, setTotalAmountOfPages] = useState(0);
-    const [recordsPerPage, setRecordsPerPage] = useState(2);
+    const [recordsPerPage, setRecordsPerPage] = useState(5);
     const [page, setPage] = useState(1);
   
     useEffect(() => {
@@ -21,13 +22,13 @@ export default function IndexEntity<T>(props:indexEntityProps<T>)
   
     function loadData() {
       axios
-        .get(props.url, { params: { page, recordsPerPage } })
+        .get(GETGenres, 
+        { params: { page, recordsPerPage }
+       })
         .then((response: AxiosResponse<T[]>) => {
-          const totalAmountOfRecords = parseInt(
-            response.headers["totalamountofrecords"],
-            10
-          );
-  
+          const totalAmountOfRecords = 
+          parseInt(
+            response.headers["totalamountofrecords"],10);
           setTotalAmountOfPages(Math.ceil(totalAmountOfRecords / recordsPerPage));
           setEntities(response.data);
         });
@@ -40,7 +41,7 @@ export default function IndexEntity<T>(props:indexEntityProps<T>)
       } catch (error) {
         if (error && error.response) {
           console.error(error.response.data);
-        }
+        } 
       }
     }
 
@@ -80,12 +81,11 @@ export default function IndexEntity<T>(props:indexEntityProps<T>)
         onChange={(newPage) => setPage(newPage)}
       />
 
-<GenericList list={entities}>
+    <GenericList list={entities}>
         <table className="table table-striped">
             {props.children(entities!,buttons)}
         </table>
       </GenericList>
-
       </>
     )
 }

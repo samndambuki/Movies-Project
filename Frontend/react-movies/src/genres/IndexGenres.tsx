@@ -19,16 +19,15 @@ export default function IndexGenres() {
             </tr>
           </thead>
           <tbody>
-            {genres?.map((genre) => (
+            {genres?.map(genre => 
               <tr key={genre.id}>
                 <td>
                   {buttons(`genres/edit/${genre.id}`,genre.id)}
                 </td>
                 <td>{genre.name}</td>
               </tr>
-            ))}
+            )}
           </tbody>
-          
           </>
           }
       </IndexEntity>
