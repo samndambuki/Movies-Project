@@ -9,6 +9,6 @@ namespace MoviesAPI.DTOs
         public string Name { get; set; } = string.Empty;
         public DateTime DateOfBirth { get; set; }
         public string  Biography { get; set; } = string.Empty;
-        //public string Picture {get;set;} = string.Empty;
+        public IFormFile Picture {get;set;}
     }
 }
