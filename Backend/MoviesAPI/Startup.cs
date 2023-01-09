@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MoviesAPI;
 using MoviesAPI.APIBehabior;
 using MoviesAPI.Filters;
+using MoviesAPI.Helpers;
 
 namespace MoviessAPI;
 public class Startup
@@ -41,6 +42,8 @@ public class Startup
         });
 
         services.AddAutoMapper(typeof(Startup));
+        services.AddScoped<IFileStorageService,AzureStorageService>();
+        
 
 
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
